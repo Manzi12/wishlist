@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "159532719659",
+    "project_id": "wish-1b7ee",
+    "storage_bucket": "wish-1b7ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159532719659:android:1b402ecb723de0d754946e",
+        "android_client_info": {
+          "package_name": "org.wit.wishlistapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159532719659-io942f74p2e292trp9l5kbgtv7ppk3iu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV-_lsfnMFUa30ZjrCJQEc5UAJbfOq1RY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159532719659-io942f74p2e292trp9l5kbgtv7ppk3iu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
