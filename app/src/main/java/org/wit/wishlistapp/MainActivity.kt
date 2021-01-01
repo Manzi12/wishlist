@@ -3,33 +3,25 @@ package org.wit.wishlistapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
-
-    private lateinit var auth: FirebaseAuth
-    private lateinit var btn_login: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.log_in)
-        auth = FirebaseAuth.getInstance()
+        setContentView(R.layout.activity_main)
 
+        val userID = intent.getStringExtra("user_id")
+        val emailId = intent.getStringExtra("email_id")
 
-        btn_login.setOnClickListener{
-            startActivity(Intent(this, Sign_up::class.java))
+        user_id.text = "USer ID :: $userID"
+        email_id.text = "Email ID :: $emailId"
+
+        btn_logout.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+
+            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
             finish()
         }
     }
-
-    override fun onStart() {
-        super.onStart()
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
-    }
-
-    fun updateUI(currentUser: FirebaseUser?){}
 }

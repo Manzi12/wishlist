@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@color/purple_200"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,26 +20,26 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/abc_vector_test" />
 
-        <EditText
-            android:id="@+id/firstName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/first_name"
-            android:importantForAutofill="no"
-            android:inputType="textEmailAddress" />
+<!--        <EditText-->
+<!--            android:id="@+id/firstName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="@string/first_name"-->
+<!--            android:importantForAutofill="no"-->
+<!--            android:inputType="textEmailAddress" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/lastName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:hint="@string/last_name"-->
+<!--            android:importantForAutofill="no"-->
+<!--            android:inputType="textEmailAddress" />-->
 
         <EditText
-            android:id="@+id/lastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/last_name"
-            android:importantForAutofill="no"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/login_username"
+            android:id="@+id/sign_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -47,7 +47,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/login_password"
+            android:id="@+id/sign_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -55,7 +55,7 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button_signup"
+            android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
