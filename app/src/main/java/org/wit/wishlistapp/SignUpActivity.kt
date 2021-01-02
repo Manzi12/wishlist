@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 
-class SignUp : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -19,7 +19,7 @@ class SignUp : AppCompatActivity() {
             when {
                 TextUtils.isEmpty(sign_username.text.toString().trim() {it <= ' '}) -> {
                     Toast.makeText(
-                        this@SignUp,
+                        this@SignUpActivity,
                         "Please enter your username",
                         Toast.LENGTH_SHORT
                     ).show()
@@ -27,7 +27,7 @@ class SignUp : AppCompatActivity() {
 
                 TextUtils.isEmpty(sign_password.text.toString().trim() {it <= ' '}) -> {
                     Toast.makeText(
-                        this@SignUp,
+                        this@SignUpActivity,
                         "please enter your password",
                         Toast.LENGTH_LONG
                     ).show()
@@ -43,12 +43,12 @@ class SignUp : AppCompatActivity() {
                                 val firebaseUser: FirebaseUser = task.result!!.user!!
 
                                 Toast.makeText(
-                                    this@SignUp,
+                                    this@SignUpActivity,
                                     "You are registered successfully",
                                     Toast.LENGTH_SHORT
                                 ).show()
 
-                                val intent = Intent(this@SignUp, MainActivity::class.java)
+                                val intent = Intent(this@SignUpActivity, MainActivity::class.java)
                                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                 intent.putExtra("user_id", firebaseUser.uid)
                                 intent.putExtra("user_email", email)
@@ -56,7 +56,7 @@ class SignUp : AppCompatActivity() {
                                 finish()
                             }else {
                                 Toast.makeText(
-                                    this@SignUp,
+                                    this@SignUpActivity,
                                     task.exception!!.message.toString(),
                                     Toast.LENGTH_SHORT
                                 ).show()
