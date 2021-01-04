@@ -30,7 +30,7 @@ class WishActivity : AppCompatActivity(), AnkoLogger {
     val wishes = WishMemStore()
 
     private var wish = WishModel()
-//    lateinit var app: MainApp
+
     private val IMAGE_REQUEST = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +40,6 @@ class WishActivity : AppCompatActivity(), AnkoLogger {
         setSupportActionBar(toolbarAdd)
         info("Wish Activity started..")
 
-//        app = application as MainApp
         var edit = false
 
         if (intent.hasExtra("wish_edit")) {
