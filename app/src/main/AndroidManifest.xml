@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wishlistapp">
-        <activity android:name=".WishListActivity"></activity>
-        <activity android:name=".activites.WishActivity" />
+        <activity android:name=".activities.WishListActivity"></activity>
+        <activity android:name=".activities.WishActivity"></activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

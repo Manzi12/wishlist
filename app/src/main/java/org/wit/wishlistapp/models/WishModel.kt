@@ -10,5 +10,4 @@ data class WishModel (
     var name: String = "",
     var time: String = "",
     var description : String = "",
-    var image: String = ""
-) : Parcelable
+    var image: String = "") : Parcelable

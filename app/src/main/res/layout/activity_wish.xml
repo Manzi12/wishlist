@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activites.WishActivity">
+    tools:context=".activities.WishActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/tb_toolbar"
+                android:id="@+id/toolbarAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/purple_700"/>
@@ -40,7 +40,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/et_wish_name"
+                    android:id="@+id/wish_name"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -54,7 +54,7 @@
                     android:textSize="14sp"/>
 
                 <EditText
-                    android:id="@+id/et_wish_time"
+                    android:id="@+id/wish_time"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -68,7 +68,7 @@
                     android:textSize="14sp"/>
 
                 <EditText
-                    android:id="@+id/et_wish_describe"
+                    android:id="@+id/wish_description"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -82,7 +82,7 @@
                     android:textSize="14sp"/>
 
                 <ImageView
-                    android:id="@+id/iv_image_wish"
+                    android:id="@+id/image_wish"
                     android:layout_width="fill_parent"
                     android:layout_height="200dp"
                     android:layout_margin="10dp"
@@ -110,14 +110,8 @@
                     android:text="@string/btn_addWish"
                     android:textSize="16sp" />
 
-
-
-
             </LinearLayout>
         </LinearLayout>
-
-
-
 
     </RelativeLayout>
 
