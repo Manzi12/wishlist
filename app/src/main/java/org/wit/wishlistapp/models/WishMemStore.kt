@@ -36,6 +36,10 @@ class WishMemStore: WishStore, AnkoLogger {
         }
     }
 
+    override fun delete(wish: WishModel) {
+        wishies.remove(wish)
+    }
+
     fun logAll(){
         wishies.forEach {info("${it}")}
     }

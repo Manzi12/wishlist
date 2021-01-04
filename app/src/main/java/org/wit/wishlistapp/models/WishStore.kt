@@ -4,4 +4,5 @@ interface WishStore {
     fun findAll() : List<WishModel>
     fun create(wish: WishModel)
     fun update(wish: WishModel)
+    fun delete(wish: WishModel)
 }

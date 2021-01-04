@@ -28,6 +28,7 @@ class WishActivity : AppCompatActivity(), AnkoLogger {
     private val db = FirebaseFirestore.getInstance()
     private val wishsDB: MutableMap<String, Any> = HashMap()
     val wishes = WishMemStore()
+    var edit = false;
 
     private var wish = WishModel()
 
@@ -105,6 +106,7 @@ class WishActivity : AppCompatActivity(), AnkoLogger {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_wish, menu)
+        if (edit && menu != null) menu.getItem(0).setVisible(true)
         return super.onCreateOptionsMenu(menu)
     }
 

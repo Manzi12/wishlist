@@ -13,6 +13,7 @@
     <string name="hint_wish_description">Description </string>
     <string name="button_addWish">Add Wish</string>
     <string name="menu_add_wish">Add</string>
+    <string name="menu_deleteWish">Delete</string>
     <string name="enter_wish_name"> Please enter a wish name </string>
     <string name="save_wish"> Save Wish </string>
     <string name="button_addImage"> Add Image </string>

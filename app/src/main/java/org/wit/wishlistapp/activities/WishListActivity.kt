@@ -15,13 +15,11 @@ import org.wit.wishlistapp.models.WishModel
 
 class WishListActivity : AppCompatActivity(), WishListener {
 
-//    lateinit var app: MainApp
     val wishes = WishMemStore()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wish_list)
-//        app = application as MainApp
         toolbar.title = title
         setSupportActionBar(toolbar)
 
@@ -29,6 +27,7 @@ class WishListActivity : AppCompatActivity(), WishListener {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = WishAdapter(wishes.findAll(), this)
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
