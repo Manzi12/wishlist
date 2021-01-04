@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.WishActivity">
+    tools:context="org.wit.wishlistapp.activities.WishActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/al_appbarLayout"
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_200"
+            android:background="@color/colorAccent"
             android:fitsSystemWindows="true"
-            android:elevation="0dip"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            app:elevation="0dip"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/purple_700"/>
+                app:titleTextColor="@color/colorPrimary" />
         </com.google.android.material.appbar.AppBarLayout>
 
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/al_appbarLayout">
+            android:layout_below="@id/appBarLayout"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,13 +46,13 @@
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
                     android:autofillHints=""
-                    android:hint="What do you wish for"
+                    android:hint="@string/hint_wish_name"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textStyle="italic"
-                    android:textSize="14sp"/>
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/wish_time"
@@ -59,60 +60,64 @@
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
                     android:autofillHints=""
-                    android:hint="When would you like to have your wish"
+                    android:hint="@string/hint_wish_time"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textStyle="italic"
-                    android:textSize="14sp"/>
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/wish_description"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:autofillHints=""
-                    android:hint="Why do you want this wish?"
+                    android:hint="@string/hint_wish_description"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"
                     android:padding="8dp"
-                    android:textStyle="italic"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"/>
 
-                <ImageView
-                    android:id="@+id/image_wish"
-                    android:layout_width="fill_parent"
-                    android:layout_height="200dp"
-                    android:layout_margin="10dp"
-                    android:scaleType="fitXY"/>
+
 
                 <Button
                     android:id="@+id/chooseImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:padding="8dp"
-                    android:textSize="16sp"
-                    android:text="Add Image"
-                    android:background="@color/purple_700"/>
+                    android:background="@color/colorAccent"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/button_addImage"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+
+                <ImageView
+                    android:id="@+id/wish_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/ic_launcher"/>
 
                 <Button
                     android:id="@+id/btnAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/purple_700"
+                    android:background="@color/colorAccent"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:stateListAnimator="@null"
-                    android:text="@string/btn_addWish"
+                    android:text="@string/button_addWish"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
-
             </LinearLayout>
-        </LinearLayout>
+        </ScrollView>
 
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

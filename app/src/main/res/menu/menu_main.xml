@@ -5,6 +5,6 @@
     <item
         android:id="@+id/item_add"
         android:icon="@android:drawable/ic_menu_add"
-        android:title="@string/menu_addWish"
+        android:title="@string/menu_add_wish"
         app:showAsAction="always" />
 </menu>

@@ -20,15 +20,17 @@ import org.wit.wishlistapp.helpers.readImage
 import org.wit.wishlistapp.helpers.readImageFromPath
 import org.wit.wishlistapp.helpers.showImagePicker
 import org.wit.wishlistapp.main.MainApp
+import org.wit.wishlistapp.models.WishMemStore
 import org.wit.wishlistapp.models.WishModel
 
 class WishActivity : AppCompatActivity(), AnkoLogger {
 
     private val db = FirebaseFirestore.getInstance()
     private val wishsDB: MutableMap<String, Any> = HashMap()
+    val wishes = WishMemStore()
 
     private var wish = WishModel()
-    lateinit var app: MainApp
+//    lateinit var app: MainApp
     private val IMAGE_REQUEST = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +40,7 @@ class WishActivity : AppCompatActivity(), AnkoLogger {
         setSupportActionBar(toolbarAdd)
         info("Wish Activity started..")
 
-        app = application as MainApp
+//        app = application as MainApp
         var edit = false
 
         if (intent.hasExtra("wish_edit")) {
@@ -59,9 +61,9 @@ class WishActivity : AppCompatActivity(), AnkoLogger {
                 toast(R.string.enter_wish_name)
             } else {
                 if (edit) {
-                    app.wishes.update(wish.copy())
+                    wishes.update(wish.copy())
                 } else {
-                    app.wishes.create(wish.copy())
+                    wishes.create(wish.copy())
                 }
             }
 

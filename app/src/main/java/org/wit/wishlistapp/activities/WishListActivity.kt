@@ -10,22 +10,24 @@ import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
 import org.wit.wishlistapp.R
 import org.wit.wishlistapp.main.MainApp
+import org.wit.wishlistapp.models.WishMemStore
 import org.wit.wishlistapp.models.WishModel
 
 class WishListActivity : AppCompatActivity(), WishListener {
 
-    lateinit var app: MainApp
+//    lateinit var app: MainApp
+    val wishes = WishMemStore()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wish_list)
-        app = application as MainApp
+//        app = application as MainApp
         toolbar.title = title
         setSupportActionBar(toolbar)
 
         val layoutManager = LinearLayoutManager(this)
-        rv_recyclerView_wish.layoutManager = layoutManager
-        rv_recyclerView_wish.adapter = WishAdapter(app.wishes.findAll(), this)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = WishAdapter(wishes.findAll(), this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -45,7 +47,7 @@ class WishListActivity : AppCompatActivity(), WishListener {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        rv_recyclerView_wish.adapter?.notifyDataSetChanged()
+        recyclerView.adapter?.notifyDataSetChanged()
         super.onActivityResult(requestCode, resultCode, data)
     }
 }

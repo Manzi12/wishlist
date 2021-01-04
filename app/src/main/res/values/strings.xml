@@ -4,8 +4,6 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_up">Sign Up</string>
-    <string name="btn_addWish">Add Wish</string>
-    <string name="menu_addWish">Add</string>
     <string name="menu_cancelWish">Add</string>
     <string name="no_account_sign_up">Register if you have no account</string>
     <string name="select_wish_image">Select Wish Image</string>

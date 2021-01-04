@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.WishListActivity">
+    tools:context="org.wit.wishlistapp.activities.WishListActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_700"
+        android:background="@color/colorAccent"
         android:fitsSystemWindows="true"
         app:elevation="0dip"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -18,15 +18,17 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:titleTextColor="@color/purple_500" />
+            app:titleTextColor="@color/colorPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_recyclerView_wish"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

@@ -35,7 +35,7 @@ class WishAdapter constructor(private var wishes: List<WishModel>,
             itemView.wish_name.text = wish.name
             itemView.wish_time.text = wish.time
             itemView.wish_description.text = wish.description
-            itemView.wish_image.setImageBitmap(readImageFromPath(itemView.context, wish.image))
+            itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, wish.image))
             itemView.setOnClickListener { listener.onPlacemarkClick(wish) }
         }
     }
